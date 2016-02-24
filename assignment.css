@@ -1,0 +1,61 @@
+/* put your css code here */
+
+/* Layout Rules */
+img { max-width: 100%; }
+
+.photo-container {
+	background-position: center center;
+	-webkit-background-size: contain;
+	background-size: contain;
+	background-repeat: no-repeat;
+    /* a bit of code to ensure the images proportion on 1:1; */
+    height: 0;
+    padding-bottom: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.photo-container img {
+    display: none;
+}
+
+.photo-thumbnail {
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.photo-thumbnail .caption {
+    background-color: rgba(255, 255, 255, 0.7);
+    bottom: 0;
+    padding-bottom: 8px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    /* for animation pourposes*/
+    -webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	-webkit-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	-o-transform: translateY(100%);
+	transform: translateY(100%);
+	opacity: 0;
+}
+.photo-thumbnail:hover .caption{
+	-webkit-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	-o-transform: translateY(0%);
+	transform: translateY(0%);
+	opacity: 1;
+}
+
+#categoryFilterContainer{
+	text-align: center;
+}
+#filterMenu{
+	display: inline-block;
+}
